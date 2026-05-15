@@ -7,14 +7,6 @@ set -e # Dừng script ngay lập tức nếu có lệnh nào bị lỗi
 # Xóa cache cũ để tránh xung đột dữ liệu cấu hình
 php artisan config:clear
 
-# Chạy database migrations
-echo "Running database migrations..."
-php artisan migrate --force
-
-# Chạy seeder cho Admin user (chỉ chạy một lần hoặc khi cần)
-echo "Running Admin user seeder..."
-php artisan db:seed --class=AdminUserSeeder --force
-
 # Xóa và cache các cấu hình cho môi trường production để tối ưu hiệu suất
 echo "Caching configurations..."
 php artisan config:cache

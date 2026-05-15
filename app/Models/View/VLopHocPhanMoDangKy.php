@@ -4,7 +4,7 @@ namespace App\Models\View;
 
 use Illuminate\Database\Eloquent\Model;
 
-class LopHocPhanMoDangKy extends Model
+class VLopHocPhanMoDangKy extends Model
 {
     protected $table = 'v_lophocphan_mo_dangky';
     public $timestamps = false;
