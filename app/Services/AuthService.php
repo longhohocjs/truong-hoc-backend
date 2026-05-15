@@ -58,7 +58,7 @@ class AuthService
             'user' => [
                 'id' => $user->UserID,
                 'username' => $user->Username,
-                'role' => $user->role->RoleName ?? 'Unknown',
+                'role' => $user->role?->RoleName ?? 'Unknown',
             ],
             'token' => $token,
             'token_type' => 'Bearer',
@@ -89,7 +89,7 @@ class AuthService
             'user' => [
                 'id' => $user->UserID,
                 'username' => $user->Username,
-                'role' => $user->role->RoleName ?? null,
+                'role' => $user->role?->RoleName ?? null,
                 'created_at' => $user->created_at,
             ]
         ];

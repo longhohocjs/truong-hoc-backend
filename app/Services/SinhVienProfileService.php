@@ -56,7 +56,7 @@ class SinhVienProfileService
             'data' => [
                 'user_id'       => $user->UserID,
                 'username'      => $user->Username,
-                'role'          => $user->role->RoleName ?? 'sinh_vien',
+                'role'          => $user->role?->RoleName ?? 'sinh_vien',
                 'ma_sv'         => $sv->MaSV,
                 'ho_ten'        => $sv->HoTen,
             'ngay_sinh'     => $sv->NgaySinh,
