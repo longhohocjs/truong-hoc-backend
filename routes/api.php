@@ -29,12 +29,7 @@ use App\Http\Controllers\Api\Admin\ThongKeController;
 use App\Http\Controllers\Api\Admin\ThongBaoController;
 use App\Http\Controllers\Api\SinhVien\HocPhiController;
 use App\Http\Controllers\Api\Admin\AdminHocPhiController;
-
-
-
-
-
-
+use App\Http\Controllers\Api\ChatController;
 
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -44,6 +39,7 @@ Route::middleware(['auth:api', \App\Http\Middleware\CheckActiveUser::class])->gr
     Route::get('/me', [AuthController::class, 'me']);
     Route::post('/change-password', [AuthController::class, 'changePassword']);
     Route::post('/logout', [AuthController::class, 'logout']);
+    Route::post('/chat', [ChatController::class, 'chat']);
    
 
     // --- SINH VIÊN ---
