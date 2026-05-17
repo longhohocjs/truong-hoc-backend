@@ -65,7 +65,7 @@ class ChatController extends Controller
         if ($user && $user->isSinhVien()) {
             return response()->json([
                 'success' => true,
-                'reply' => "Dạ, em chỉ là bot hỗ trợ theo từ khóa.\n👉 Bạn hãy thử nhập các từ như: lịch học, điểm, gpa, tín chỉ, học phí, môn nợ, đăng ký môn..."
+                'reply' => "Dạ, em là trợ lý Edusys hỗ trợ theo từ khóa.\n👉 Bạn hãy thử nhập các từ như: lịch học, điểm, gpa, tín chỉ, học phí, môn nợ, đăng ký môn..."
             ]);
         }
 
@@ -74,14 +74,14 @@ class ChatController extends Controller
             // Nếu Giảng viên hỏi linh tinh không nằm trong mảng từ khóa
             return response()->json([
                 'success' => true,
-                'reply' => "Dạ, hệ thống chỉ hỗ trợ tra cứu theo từ khóa.\n👉 Thầy/cô vui lòng nhập: lịch dạy, lịch coi thi, lớp cố vấn, nhập điểm..."
+                'reply' => "Dạ, trợ lý Edusys chỉ hỗ trợ tra cứu theo từ khóa.\n👉 Thầy/cô vui lòng nhập: lịch dạy, lịch coi thi, lớp cố vấn, nhập điểm..."
             ]);
         }
 
         // --- MẶC ĐỊNH ---
         return response()->json([
             'success' => true,
-            'reply' => 'Hệ thống chỉ hỗ trợ tra cứu nghiệp vụ thông qua các từ khóa. Vui lòng nhập đúng từ khóa cần tìm!'
+            'reply' => 'Trợ lý Edusys chỉ hỗ trợ tra cứu nghiệp vụ thông qua các từ khóa. Vui lòng nhập đúng từ khóa cần tìm!'
         ]);
     }
 }
